@@ -81,6 +81,16 @@ p {
   }
 }
 
+header{
+  ul{
+    li{
+      margin-right:15px;
+      margin-left:13px;
+    }
+  }
+}
+
+
 /* footer */
 
 footer {
@@ -238,6 +248,7 @@ input {
   float: left;
   margin-right: 10px;
 }
+
 aside {
   textarea {
     height: 100px;
