@@ -3,6 +3,10 @@
 /* mixins, variables, etc. */
 
 $grayMediumLight: #eaeaea;
+$grayLight: #eaeaea;
+$grayLighter: #eaeaea;
+$grayDarker: #eaeaea;
+$grayMediumLight: #eaeaea;
 
 @mixin box_sizing {
   -moz-box-sizing: border-box;
@@ -171,7 +175,7 @@ aside {
     }
     &:hover {
       text-decoration: none;
-      color: $blue;
+      color: blue;
     }
   }
   strong {
@@ -208,10 +212,10 @@ input {
   }
 }
 
-.field_with_errors {
+/*.field_with_errors {
   @extend .control-group;
   @extend .error;
-}
+}*/
 
 /* Users index */
 
