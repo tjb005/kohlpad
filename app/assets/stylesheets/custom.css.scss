@@ -71,13 +71,12 @@ p {
 
 #logo {
   float: left;
-  margin-right: 25px;
-  font-size: 1.7em;
   color: white;
+  margin-right: 10px;
+  padding-top: 12px;
+  font-size: 1.7em;
   text-transform: lowercase;
   letter-spacing: -1px;
-  padding-top: 9px;
-  font-weight: bold;
   line-height: 1;
   &:hover {
     color: white;
@@ -85,28 +84,35 @@ p {
   }
 }
 
-header{
-  ul{
-    li{
-/*      margin-right:5em;
-      margin-left:5em;*/
- /*     padding-top: 4px;
-      padding-bottom: 4px;*/
-    }
-    a{
-/*      color:white;
-      font-size: 1.2em;
-      letter-spacing: -1px;
-      line-height: 1;*/
-    }
+.navtitles{
+  color:white;
+  font-size: 1em;
+  letter-spacing: -1px;
+  line-height: 1;
+  font-weight: bold;
+    &:hover {
+    color: black;
+    text-decoration: none;
   }
 }
+
+.nav { li 
+  {
+    padding-top:7px;
+  }
+}
+
+.nav-pills-item > li > a:hover {
+      background-color: black;
+      color: #ffffff;
+    } 
+
 
 
 
 
 /* footer */
-
+  
 footer {
   margin-top: 45px;
   padding-top: 5px;
@@ -114,9 +120,9 @@ footer {
   color: $grayLight;
   a {
     color: $gray;
-    &:hover {
+/*    &:hover {
       color: $grayDarker;
-    }
+    }*/
   }
   small {
     float: left;
@@ -126,8 +132,8 @@ footer {
     list-style: none;
     li {
       float: left;
-      margin-left: 5em;
-      margin-right:5em;
+/*      margin-left: 6em;
+      margin-right:6em;*/
     }
   }
 }
