@@ -114,26 +114,22 @@ p {
 /* footer */
   
 footer {
-  margin-top: 45px;
+  margin-top:45px;
   padding-top: 5px;
   border-top: 1px solid $grayMediumLight;
-  color: $grayLight;
   a {
     color: $gray;
-/*    &:hover {
-      color: $grayDarker;
-    }*/
-  }
-  small {
-    float: left;
+    &:hover{
+      color:$gray;
+      text-decoration:none;
+    };
   }
   ul {
-    /*float: right;*/
     list-style: none;
     li {
       float: left;
-/*      margin-left: 6em;
-      margin-right:6em;*/
+      margin-left: 6em;
+      margin-right:6em;
     }
   }
 }
