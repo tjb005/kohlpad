@@ -84,6 +84,24 @@ p {
   }
 }
 
+.HDR_row1{
+  margin-top:-50px;
+  font-size:1em;
+}
+
+.HDR_row2{
+  margin-top:-20px;
+}
+
+.LOGIN_REGISTER{
+  font-size:1em;
+  color:black;
+  &:hover{
+    color:black;
+    text-decoration:none;
+  }
+}
+
 .navtitles{
   color:white;
   font-size: 1em;
