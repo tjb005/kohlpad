@@ -30,7 +30,7 @@
       </li>
       <li><%= link_to "REGISTER", signin_path, style:"color:black" %></li>
       <% else %>
-      <li><%= link_to "LOGIN", signout_path, class:"LOGIN_REGISTER" %></li>
+      <li><%= link_to "LOGIN", signin_path, class:"LOGIN_REGISTER" %></li>
       <li><%= link_to "REGISTER", signup_path, class:"LOGIN_REGISTER" %></li>
       <% end %>
     </ul>
