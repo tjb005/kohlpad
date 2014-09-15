@@ -17,10 +17,24 @@ def make_users
     name  = Faker::Name.name
     email = "example-#{n+1}@railstutorial.org"
     password  = "password"
+    ethnicity = "black"
+    skin_type = "red"
+    complexion = "brown"
+    brands = "MAC"
+    about = "I like makeup"
+    website = "www.test.com"
+    location = "location"
     User.create!(name:     name,
                  email:    email,
                  password: password,
-                 password_confirmation: password)
+                 password_confirmation: password,
+                 ethnicity: ethnicity,
+                 skin_type: skin_type,
+                 complexion: complexion,
+                 brands: brands,
+                 about: about,
+                 website: website,
+                 location: location)
   end
 end
 
