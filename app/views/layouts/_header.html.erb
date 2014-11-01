@@ -1,31 +1,59 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
-  <div class="navbar-inner">
+  <!-- NAVBAR -->
+  <div class="navbar navbar-inverse" role="navigation">
     <div class="container">
-      <%= link_to "kohlpad", root_path, id: "logo" %>
-      <nav>
-        <ul class="nav pull-right">
-          <li><%= link_to "Home", root_path %></li>
-          <li><%= link_to "Help", help_path %></li>
-          <% if signed_in? %>
-            <li><%= link_to "Users", users_path %></li>
-            <li id="fat-menu" class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                Account <b class="caret"></b>
-              </a>
-              <ul class="dropdown-menu">
-                <li><%= link_to "Profile", current_user %></li>
-                <li><%= link_to "Settings", edit_user_path(current_user) %></li>
-                <li class="divider"></li>
-                <li>
-                  <%= link_to "Sign out", signout_path, method: "delete" %>
-                </li>
+      <div class="navbar-header" style="float:none !important">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">MENU</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html"><img src="/assets/logo.png"></a>
+      </div>
+      <div class="navmenu">
+        <div class="navmenu-right collapse navbar-collapse">
+          <div class="navmenu-socialbar">
+            <div class="navmenu-upperbarwrapper">
+              <div class="navmenu-sessionwrapper">
+                <span><a href="#">REGISTER</a></span><span class="navbar-sessionseparator">-</span><span><a href="#">LOGIN</a></span>
+              </div>
+              <div class="navmenu-socialwrapper">
+                <a href="#"><i class="fa fa-google-plus-square"></i></a>
+                <a href="#"><i class="fa fa-facebook-square"></i></a>
+                <a href="#"><i class="fa fa-twitter-square"></i></a>
+                <a href="#"><i class="fa fa-linkedin-square"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="navmenu-searchbar">
+            <div class="navmenu-searchbarwrapper">
+              <form>
+                <input class="navmenu-searchbarinput" type="text" placeholder="Search for products here...">
+                <button class="navmenu-searchbarbutton"><i class="fa fa-search"></i></button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="navmenu-left collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="#">HOME</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">GALLERIES <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">WEDDING</a></li>
+                <li><a href="#">EVERYDAY</a></li>
+                <li><a href="#">AFTER FIVE</a></li>
+                <li><a href="#">FORMAL</a></li>
+                <li><a href="#">RED LIPS</a></li>
+                <li><a href="#">CORPORATE</a></li>
               </ul>
             </li>
-          <% else %>
-            <li><%= link_to "Sign in", signin_path %></li>
-          <% end %>
-        </ul>
-      </nav>
+            <li><a href="#">TUTORIALS</a></li>
+            <li><a href="#">REVIEWS</a></li>
+            <li><a href="#">FIND A MUA</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
-</header>
+  <!-- /NAVBAR -->

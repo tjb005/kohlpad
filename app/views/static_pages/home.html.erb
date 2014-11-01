@@ -1,43 +1,208 @@
-<% if signed_in? %>
-<div class="row">
-  <aside class="span4">
-    <section>
-      <%= render 'shared/user_info' %>
-    </section>
-    <section>
-      <%= render 'shared/stats' %>
-    </section>
-    <section>
-      <%= render 'shared/micropost_form' %>
-    </section>
-  </aside>
-  <div class="span8">
-    <h3>Micropost Feed</h3>
-    <%= render 'shared/feed' %>
+  <!-- SLIDER -->
+  <div id="bigslider" class="owl-carousel owl-theme">
+    <!-- SLIDER ITEM -->
+    <div class="item" style="background-image:url('/assets/bigslider/slide01.jpg');">
+      <div class="verticalalignout">
+        <div class="verticalalignin">
+          <div class="bigtext"><span>LOREM IPSUM DOLOR</span></div>
+          <div class="smalltext"><span>sed do eiusmod tempor incididunt</span></div>
+          <div class="bigbutton"><button class="btn-a" data-target="#">BUY NOW</button></div>
+        </div>
+      </div>
+    </div>
+    <!-- /SLIDER ITEM -->
+
+    <!-- SLIDER ITEM -->
+    <div class="item" style="background-image:url('/assets/bigslider/slide02.jpg');">
+      <div class="verticalalignout">
+        <div class="verticalalignin">
+          <div class="bigtext"><span>AT VERO ET ACUSAMUS</span></div>
+          <div class="smalltext"><span>omnis voluptas assumenda est</span></div>
+          <div class="bigbutton"><button class="btn-a" data-target="#">BUY NOW</button></div>
+        </div>
+      </div>
+    </div>
+    <!-- /SLIDER ITEM -->
+
+    <!-- SLIDER ITEM -->
+    <div class="item" style="background-image:url('/assets/bigslider/slide03.jpg');">
+      <div class="verticalalignout">
+        <div class="verticalalignin">
+          <div class="bigtext"><span>ITAQUE EARUM RERUM</span></div>
+          <div class="smalltext"><span>repudiandae sint et molestiae</span></div>
+          <div class="bigbutton"><button class="btn-a" data-target="#">BUY NOW</button></div>
+        </div>
+      </div>
+    </div>
+    <!-- /SLIDER ITEM -->
   </div>
-</div>
-<% else %>
+  <!-- /SLIDER -->
 
-<div class="row">
-<h3 style="margin-left:15px"> FEATURED LOOKS</h3>
-</div>
+  <!-- CONTAINER -->
+  <div class="container">
+    <!-- CATEGORY -->
+    <div class="row">
+      <div class="categorieswrapper">
+        <!-- CATEGORY TITLE -->
+        <div class="col-xs-12 categorytitle">FEATURED LOOKS</div>
+        <!-- /CATEGORY TITLE -->
 
-<div class="row">
-<div class ="col-md-4">
-<%= link_to image_tag("keira.jpg", alt: "Rails", class:"img-thumbnail img-responsive center"), 'http://rubyonrails.org/' %>
+        <!-- CATEGORY ITEM -->
+        <div class="col-xs-4 col-xxs categoryitem">
+          <div class="categoryimage">
+            <%= link_to image_tag("products/product01.png", alt: "Rails")%>
+          </div>
+        </div>
+        <!-- /CATEGORY ITEM -->
 
-</div>
+        <!-- CATEGORY ITEM -->
+        <div class="col-xs-4 col-xxs categoryitem">
+          <div class="categoryimage">
+            <%= link_to image_tag("products/product02.png", alt: "Rails")%>
+          </div>
+        </div>
+        <!-- /CATEGORY ITEM -->
 
-<div class ="col-md-4">
-<%= link_to image_tag("keira.jpg", alt: "Rails", class:"img-thumbnail img-responsive center"), 'http://rubyonrails.org/' %>
+        <!-- CATEGORY ITEM -->
+        <div class="col-xs-4 col-xxs categoryitem">
+          <div class="categoryimage">
+            <%= link_to image_tag("products/product03.png", alt: "Rails")%>
+          </div>
+        </div>
+        <!-- /CATEGORY ITEM -->
+      </div>
+    </div>
+    <!-- /CATEGORY -->
 
-</div>
+    <!-- CATEGORY -->
+    <div class="row">
+      <div class="categorieswrapper">
+        <!-- CATEGORY TITLE -->
+        <div class="col-xs-12 categorytitle">RECENT REVIEWS</div>
+        <!-- /CATEGORY TITLE -->
 
-<div class ="col-md-4">
-<%= link_to image_tag("keira.jpg", alt: "Rails", class:"image-responsive img-thumbnail center"), 'http://rubyonrails.org/' %>
+        <!-- CATEGORY ITEM -->
+        <div class="col-xs-4 col-xxs categoryitem">
+          <div class="categoryimage">
+            <%= link_to image_tag("products/product04.png", alt: "Rails")%>
+          </div>
+        </div>
+        <!-- /CATEGORY ITEM -->
 
-</div>
-</div>
+        <!-- CATEGORY ITEM -->
+        <div class="col-xs-4 col-xxs categoryitem">
+          <div class="categoryimage">
+            <%= link_to image_tag("products/product05.png", alt: "Rails")%>
+          </div>
+        </div>
+        <!-- /CATEGORY ITEM -->
+
+        <!-- CATEGORY ITEM -->
+        <div class="col-xs-4 col-xxs categoryitem">
+          <div class="categoryimage">
+            <%= link_to image_tag("products/product06.png", alt: "Rails")%>
+          </div>
+        </div>
+        <!-- /CATEGORY ITEM -->
+      </div>
+    </div>
+    <!-- /CATEGORY -->
+
+    <!-- CATEGORY -->
+    <div class="row">
+      <div class="categorieswrapper">
+        <!-- CATEGORY TITLE -->
+        <div class="col-xs-12 categorytitle">FEATURED MUA</div>
+        <!-- /CATEGORY TITLE -->
+
+        <!-- CATEGORY ITEM -->
+        <div class="col-xs-4 col-xxs categoryitem">
+          <div class="categoryimage">
+            <%= link_to image_tag("products/product07.png", alt: "Rails")%>
+          </div>
+        </div>
+        <!-- /CATEGORY ITEM -->
+
+        <!-- CATEGORY ITEM -->
+        <div class="col-xs-4 col-xxs categoryitem">
+          <div class="categoryimage">
+            <%= link_to image_tag("products/product08.png", alt: "Rails")%>
+          </div>
+        </div>
+        <!-- /CATEGORY ITEM -->
+
+        <!-- CATEGORY ITEM -->
+        <div class="col-xs-4 col-xxs categoryitem">
+          <div class="categoryimage">
+            <%= link_to image_tag("products/product09.png", alt: "Rails")%>
+          </div>
+        </div>
+        <!-- /CATEGORY ITEM -->
+      </div>
+    </div>
+    <!-- /CATEGORY -->
+  </div>
+  <!-- CONTAINER -->
 
 
-<% end %>
+  <!-- CUSTOM JS -->
+  <script type="text/javascript">
+    // RESIZE BIGSLIDER
+    function resizeBigslider() {
+      if ($(window).width() > 768) {
+        $('#bigslider .item').height( $(window).height() - 122);
+      }
+      else {
+        $('#bigslider .item').height( $(window).width() / 2);
+      }
+    };
+    function resizeVerticalalignout() {
+      if ($(window).width() > 768) {
+        $('#bigslider .item .verticalalignout').height( $(window).height() - 122);
+      }
+      else {
+        $('#bigslider .item .verticalalignout').height( $(window).width() / 2);
+      }
+    };
+    $(document).ready(resizeBigslider);
+    $(window).resize(resizeBigslider);
+    $(document).ready(resizeVerticalalignout);
+    $(window).resize(resizeVerticalalignout);
+
+    // RESIZE SEARCH BAR
+    function resizeNavbarsearchinput() {
+      if ($(window).width() > 768) {
+        $('.navmenu-searchbarinput').width( $('.navmenu-right').width() - 40 );
+      }
+      else {
+        $('.navmenu-searchbarinput').width( $(window).width() - 100 );
+      }
+    };
+    $(document).ready(resizeNavbarsearchinput);
+    $(window).resize(resizeNavbarsearchinput);
+
+    // RESIZE NEWSLETTER BAR
+    function resizeNewsletterbarinput() { $('.footer-socialnewsletterbarinput').width( $('.footer-socialnewsletterbarwrapper').width() - 50 ); };
+    $(document).ready(resizeNewsletterbarinput);
+    $(window).resize(resizeNewsletterbarinput);
+
+    // CREATE SLIDER
+    $(document).ready(function() {
+      $("#bigslider").owlCarousel({
+        navigation : false,
+        singleItem : true,
+          transitionStyle : "fade",
+          autoPlay : 5000,
+          slideSpeed : 1000, 
+          paginationSpeed : 1000
+      });
+    });
+
+    // MAKING BUTTONS ACT AS A LINK
+    $('.btn-a').on('click', function(event) {
+      event.preventDefault(); 
+      var url = $(this).data('target');
+      location.replace(url);
+    });
+  </script>
+  <!-- CUSTOM JS -->
