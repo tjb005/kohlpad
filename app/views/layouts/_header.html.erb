@@ -1,126 +1,31 @@
-<header>
-<!-- search bar  -->
-<div class="row clearfix visible-lg">
-  <div class="container HDR_row1">
-     <form class="navbar-form navbar-right" role="search">
-      <div class="form-group">
-        <input type="text" class="form-control" placeholder="Search">
-      </div>
-      <button type="submit" class="btn btn-default" style="margin-top:-13px">Submit</button>
-    </form>
-  </div>
-</div>
-<!-- user options -->
-<div class="row HDR_row2">
-  <div class="container">
-    <ul class="nav nav-tabs col-lg-offset-10">
-      <% if signed_in? %> 
-      <li id="fat-menu" class="dropdown"> 
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:black">
-          LOGIN <b class="divider"></b>
-        </a>
-        <ul class="dropdown-menu">
-          <li><li><%= link_to "Users", users_path %></li>
-          <li><li><%= link_to "Users", users_path %></li>
-          <li class="divider"></li>
-          <li>
-            <%= link_to "Sign out", signout_path, method: "delete" %>
-          </li>
-        </ul>
-      </li>
-      <li><%= link_to "REGISTER", signin_path, style:"color:black" %></li>
-      <% else %>
-      <li><%= link_to "LOGIN", signin_path, class:"LOGIN_REGISTER" %></li>
-      <li><%= link_to "REGISTER", signup_path, class:"LOGIN_REGISTER" %></li>
-      <% end %>
-    </ul>
-  </div>
-</div>
-<!-- navbar NEEDS FIXING-->
-<div class="container"> 
-<nav class="navbar navbar-default navbar-inverse container" role="navigation">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="navbar-inner">
+    <div class="container">
       <%= link_to "kohlpad", root_path, id: "logo" %>
+      <nav>
+        <ul class="nav pull-right">
+          <li><%= link_to "Home", root_path %></li>
+          <li><%= link_to "Help", help_path %></li>
+          <% if signed_in? %>
+            <li><%= link_to "Users", users_path %></li>
+            <li id="fat-menu" class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Account <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li><%= link_to "Profile", current_user %></li>
+                <li><%= link_to "Settings", edit_user_path(current_user) %></li>
+                <li class="divider"></li>
+                <li>
+                  <%= link_to "Sign out", signout_path, method: "delete" %>
+                </li>
+              </ul>
+            </li>
+          <% else %>
+            <li><%= link_to "Sign in", signin_path %></li>
+          <% end %>
+        </ul>
+      </nav>
     </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav nav-pills nav-justified nav-pills-item">
-
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle navtitles" data-toggle="dropdown" >HOME</a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
-          </ul>
-        </li>
-
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle navtitles" data-toggle="dropdown" >GALLERIES</a>
-          <ul class="dropdown-menu">
-            <li><a href="#">WEDDING</a></li>
-            <li><a href="#">EVERYDAY</a></li>
-            <li><a href="#">AFTER FIVE</a></li>
-            <li><a href="#">FORMAL</a></li>
-            <li><a href="#">HALLOWEEN</a></li>
-            <li><a href="#">RED LIPS</a></li>
-            <li><a href="#">CORPORATE</a></li>
-          </ul>
-        </li>
-
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle navtitles" data-toggle="dropdown" >TUTORIALS</a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
-          </ul>
-        </li>
-
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle navtitles" data-toggle="dropdown" >REVIEWS</a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
-          </ul>
-        </li>
-
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle navtitles" data-toggle="dropdown" >FIND A MUA</a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
-          </ul>
-        </li>
-
-      </ul>
-    </div><!-- /.navbar-collapse -->
-</nav> 
-</div><!-- /.container-fluid -->
+  </div>
 </header>
